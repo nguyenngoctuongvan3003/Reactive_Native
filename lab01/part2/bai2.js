@@ -17,3 +17,14 @@
 // values (so don't store the tip values in separate variables first, but right in the new 
 // array)
 
+function calcTip(billValue){
+    return billValue>=50&&billValue<=300?billValue*0.15:billValue*0.2
+}
+
+const bill=[125,555,44]
+const tip=bill.map(calcTip)
+const total=bill.map((bill,index)=>bill+tip[index])
+
+console.log(`Bill:${bill}`)
+console.log(`Tip:${tip}`)
+console.log(`total:${total}`)
